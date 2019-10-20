@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
+
+/* Reset and Global Styling */
+:root{
+    --primary: #3441f7;
+    --medium-black: #292931;
+    --off-white: #ececec;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    max-width: 960px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+/* Main Styling*/
+
+img
+{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    filter: brightness(1.1);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.wrapper > .content {
+    text-align: center; margin-top: 42px; padding: 0 28px;
+}
+
+.wrapper > .content > h1 {
+    margin: 7px; font-size: 5.8em; color: var(--primary); font-weight: 700;
+}
+
+.wrapper > .content > h2 {
+    margin: 7px; font-size: 3em; color: var(--medium-black); margin-bottom:12px; opacity: .85;
+}
+
+.wrapper > .content > p {
+    font-size: 1.8em; margin-bottom: 32px; font-weight: 400; width: 100%; color: var(--medium-black); opacity: .85;
+}
+
+/* Email Button */
+.content > a
+{   
+    text-decoration: none;
+    padding: 12px 28px;
+    background: var(--primary);
+    color: var(--off-white);
+    margin: 0 6px;
+    border-radius: 4px;
+    font-size: 1.5em;
+    user-select: none;
+    cursor: pointer;
+    margin-bottom: 32px;
+    box-shadow: 0 8px 32px -6px #3441f770;
+    -webkit-box-shadow: 0 8px 32px -6px #3441f770;
+    -moz-box-shadow: 0 8px 32px -6px var#3441f770;
+    transition: .1s ease-in-out;
+}
+
+.content > a:hover
+{
+    background: var(--medium-black);
+    box-shadow: 0 8px 32px -6px #29293170;
+    -webkit-box-shadow: 0 8px 32px -6px #29293170;
+    -moz-box-shadow: 0 8px 32px -6px #29293170;
+    transition: .1s ease-in-out;
+}
+
+
+/* Media Queries for Screen 900px, 600px, 480px */
+
+@media only screen and (max-width: 900px)
+{   .wrapper {max-width: 900px;}
+    .wrapper > .content > h1 {font-size: 5.2em}
+    .wrapper > .content > h2 {font-size: 2em}
+    .wrapper > .content > p {font-size: 1.5em}
+    .content > a {font-size: 1.3em;}
+}
+
+@media only screen and (max-width: 600px)
+{   .wrapper {max-width: 600px;}
+    .wrapper > .content > h1 {font-size: 3.8em}
+    .wrapper > .content > h2 {font-size: 1.8em}
+    .wrapper > .content > p {font-size: 1.5em}
+    .content > a {font-size: 1.2em;}
+    img{width: 250px;}
+}
+
+@media only screen and (max-width: 480px)
+{   .wrapper {max-width: 480px;}
+    .wrapper > .content > h1 {font-size: 2.6em}
+    .wrapper > .content > h2 {font-size: 1.2em}
+    .wrapper > .content > p {font-size: 1em}
+    img{width: 200px;}
+}
